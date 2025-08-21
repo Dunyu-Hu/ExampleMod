@@ -1,5 +1,6 @@
 package com.example.examplemod;
 
+import com.example.examplemod.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
@@ -43,6 +44,7 @@ public class ExampleMod
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
+        ModItems.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -70,7 +72,11 @@ public class ExampleMod
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.ICE_ETHER);
+            event.accept(ModItems.RAW_ICE_ETHER);
+            event.accept(ModItems.CARDBOARD);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
