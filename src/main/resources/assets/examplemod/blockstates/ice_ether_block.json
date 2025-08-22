@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "examplemod:block/ice_ether_block"
+    }
+  }
+}

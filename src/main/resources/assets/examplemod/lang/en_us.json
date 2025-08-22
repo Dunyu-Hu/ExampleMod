@@ -1,5 +1,7 @@
 {
   "item.examplemod.ice_ether": "Ice Ether",
   "item.examplemod.raw_ice_ether": "Raw Ice Ether",
-  "item.examplemod.material.cardboard": "Cardboard"
+  "item.examplemod.material.cardboard": "Cardboard",
+
+  "block.examplemod.ice_ether_block": "Block of Ice Ether"
 }

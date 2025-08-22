@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "examplemod:ice_ether"
+    }
+  },
+  "result": {
+    "item": "examplemod:ice_ether_block",
+    "count": 1
+  }
+}

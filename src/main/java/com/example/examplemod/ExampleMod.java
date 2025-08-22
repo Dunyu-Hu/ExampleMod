@@ -1,5 +1,6 @@
 package com.example.examplemod;
 
+import com.example.examplemod.block.ModBlocks;
 import com.example.examplemod.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
@@ -45,6 +46,7 @@ public class ExampleMod
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -76,6 +78,7 @@ public class ExampleMod
             event.accept(ModItems.ICE_ETHER);
             event.accept(ModItems.RAW_ICE_ETHER);
             event.accept(ModItems.CARDBOARD);
+            event.accept(ModBlocks.ICE_ETHER_BLOCK);
         }
     }
 
